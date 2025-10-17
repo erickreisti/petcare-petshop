@@ -1,42 +1,124 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* ===== ESTILOS ESPECÍFICOS DOS COMPONENTES ===== */
+
+/* Hero Section - Bolhas Animadas */
+.hero-bubble-1 {
+  position: absolute;
+  top: 25%;
+  left: -5rem;
+  width: 24rem;
+  height: 24rem;
+  background: rgba(252, 124, 75, 0.1);
+  border-radius: 50%;
+  filter: blur(3rem);
+  animation: float 6s ease-in-out infinite;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.hero-bubble-2 {
+  position: absolute;
+  bottom: 33%;
+  right: -4rem;
+  width: 16rem;
+  height: 16rem;
+  background: rgba(255, 193, 7, 0.1);
+  border-radius: 50%;
+  filter: blur(2rem);
+  animation: float 6s ease-in-out infinite 2s;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.hero-bubble-3 {
+  position: absolute;
+  top: 5rem;
+  right: 25%;
+  width: 8rem;
+  height: 8rem;
+  background: rgba(253, 110, 76, 0.05);
+  border-radius: 50%;
+  filter: blur(1.5rem);
+  animation: float 6s ease-in-out infinite 1s;
+}
+
+.hero-bubble-4 {
+  position: absolute;
+  bottom: 5rem;
+  left: 33%;
+  width: 6rem;
+  height: 6rem;
+  background: rgba(255, 154, 68, 0.1);
+  border-radius: 50%;
+  filter: blur(1.5rem);
+  animation: float 6s ease-in-out infinite 3s;
+}
+
+/* WhatsApp Float Button */
+.whatsapp-float {
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+}
+
+/* Custom animations for components */
+.service-card-hover {
+  transition: all 0.3s ease;
+}
+
+.service-card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.price-card-popular {
+  border: 2px solid #fc7c4b;
+  transform: scale(1.05);
+}
+
+/* Header scroll effect */
+.header-scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation link hover effect */
+.nav-link-hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0.25rem;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #fd6e4c;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link-hover:hover::after {
+  width: 75%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-bubble-1 {
+    width: 16rem;
+    height: 16rem;
+    left: -3rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .hero-bubble-2 {
+    width: 12rem;
+    height: 12rem;
+    right: -2rem;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .hero-bubble-3,
+  .hero-bubble-4 {
+    width: 4rem;
+    height: 4rem;
   }
-}
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  .price-card-popular {
+    transform: scale(1.02);
+  }
 }
