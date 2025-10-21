@@ -1,3 +1,5 @@
+import dogHero from "../../public/img/dog.png";
+
 export default function Home() {
   return (
     <section
@@ -134,7 +136,7 @@ export default function Home() {
           <div className="relative">
             <div className="relative z-10">
               <img
-                src="/public/img/dog.png"
+                src={dogHero}
                 alt="Cachorro Feliz - Petcare"
                 className="w-full max-w-2xl mx-auto transform hover:scale-105 transition-transform duration-700"
               />
