@@ -134,7 +134,7 @@ export default function Home() {
           <div className="relative">
             <div className="relative z-10">
               <img
-                src="/img/dog.png"
+                src="/public/img/dog.png"
                 alt="Cachorro Feliz - Petcare"
                 className="w-full max-w-2xl mx-auto transform hover:scale-105 transition-transform duration-700"
               />
